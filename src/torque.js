@@ -214,7 +214,7 @@ Torque.modules.layer = function (torque) {
 
             var date = new Date(this._current * 1000);
             var date_arry = date.toString().substr(4).split(' ');
-            torque.clock.set('<span id="month">' + date_arry[0] + '</span> <span id="year">' + date_arry[2] + '</span>');
+            torque.clock.set('<span id="time">' + date_arry[3]+ '</span> <span id="GMT">' + date_arry[4]+ '</span> <span id="day">' + date_arry[1]+'</span> <span id="month">' + date_arry[0] + '</span> <span id="year">' + date_arry[2] + '</span>');
 
             if (this.options.subtitles) {
                 torque.subtitles.set(date);

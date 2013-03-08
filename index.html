@@ -177,6 +177,22 @@
                 tablename = TorqueOptions.table;
                 torque.setOptions(TorqueOptions)
             }
+			this.co_state = function () {
+                TorqueOptions.user = "srcbeatles";
+                TorqueOptions.table = "co_state";
+                TorqueOptions.column = "zdate";
+                TorqueOptions.blendmode = 'source-over';
+                TorqueOptions.trails = true;
+                TorqueOptions.point_type = 'circle';
+                TorqueOptions.cumulative = true;
+                TorqueOptions.resolution = 2;
+                TorqueOptions.steps = 750;
+                TorqueOptions.fps = 24;
+                TorqueOptions.fitbounds = 1;
+                TorqueOptions.clock = true;
+                tablename = TorqueOptions.table;
+                torque.setOptions(TorqueOptions)
+            }
 			this.old_weather_agg = function () {
                 TorqueOptions.user = "viz2";
                 TorqueOptions.table = "ow";
@@ -338,6 +354,7 @@
         var ps = new PresetOptions();
         var presets = toggle.addFolder("Other examples", false);
 		presets.add(ps, 'jacks_pueblo_test');
+		presets.add(ps, 'co_state');
 		//presets.add(ps, 'us_postoffices');
         //presets.add(ps, 'african_honey_bee');
         //presets.add(ps, 'quake_total');
